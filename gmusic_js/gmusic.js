@@ -61,7 +61,7 @@ require(["jquery", "underscore", "backbone", "json2"], function($, _, Backbone, 
       //console.log(f);
     //})
     valueLen = value.length;
-  
+    console.log(value);
     fixed = fix_encoding(value);
     fixed = fixed.replace('"','\\"')
     document.getElementsByTagName("input")[0].value = fixed;
