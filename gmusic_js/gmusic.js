@@ -140,9 +140,9 @@ require(["jquery", "underscore", "backbone", "json2"], function($, _, Backbone, 
   function process() {
     console.log('start');
     if (process_all) {
-      $('li[data-type="all"]').click();
+      $('div[data-type="all"]').click();
     }
-    songs = $('.songRow');
+    songs = $('.song-row');
     _.isString("moe");
     process_songs(start_song);
   }
