@@ -55,10 +55,13 @@ require(["jquery", "underscore", "backbone", "json2"], function($, _, Backbone, 
   }
 
   function process_field(id) {
-    value = document.getElementById(id).value;
-    console.log('value: '+ value)
+    edits = document.getElementsByClassName(id);
+    console.log('value: '+ value);
+    edits.each('input[type="text"', function(f){
+      console.log(f);
+    })
     valueLen = value.length;
-
+  
     fixed = fix_encoding(value);
     fixed = fixed.replace('"','\\"')
     document.getElementById(id).value = fixed;
