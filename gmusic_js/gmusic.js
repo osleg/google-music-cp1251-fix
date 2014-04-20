@@ -151,8 +151,8 @@ require(["jquery", "underscore", "backbone", "json2"], function($, _, Backbone, 
 
   jQuery(function() {
     $('<a><span class="nav-option">FIX ENCODING</span></a>')
-      .prependTo($('<li>')
-      .prependTo($('.nav_collections')))
+      .prependTo($('<div>')
+      .prependTo($('.nav')))
       .on("click", function() {
         process();
       });
