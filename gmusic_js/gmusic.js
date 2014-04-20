@@ -69,6 +69,8 @@ require(["jquery", "underscore", "backbone", "json2"], function($, _, Backbone, 
 
   function open_menu(song) {
     function sendEvent(elem, name) {
+      console.log(elem);
+      console.log(name);
       var event = document.createEvent("MouseEvents");
       event.initMouseEvent(name,true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
       elem.dispatchEvent(event);
