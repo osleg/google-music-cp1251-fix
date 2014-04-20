@@ -77,7 +77,7 @@ require(["jquery", "underscore", "backbone", "json2"], function($, _, Backbone, 
     }
     var menu = song.find('.title-right-items')[0];
     sendEvent(menu,'mouseover');
-    bt = menu.getElementsByClassName('goog-flat-button')[0];
+    bt = menu.getElementsByClassName('hover-button')[0];
     sendEvent(bt, 'click');
     editItem = document.getElementById(":m")
     sendEvent(editItem,'mousedown');
