@@ -66,7 +66,7 @@ require(["jquery", "underscore", "backbone", "json2"], function($, _, Backbone, 
     fixed = fixed.replace('"','\\"')
     document.getElementsByTagName("input")[0].value = fixed;
 
-    if (valueLen != document.getElementById(id).value.length) {
+    if (valueLen != document.getElementsByTagName("input").value.length) {
       throw Exception("Possible fix error - value length changed")
     }
   }
