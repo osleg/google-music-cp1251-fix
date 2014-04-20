@@ -56,7 +56,7 @@ require(["jquery", "underscore", "backbone", "json2"], function($, _, Backbone, 
 
   function process_field(id) {
     edits = document.getElementsByClassName(id);
-    console.log('value: '+ value);
+    //console.log('value: '+ value);
     edits.each('input[type="text"', function(f){
       console.log(f);
     })
