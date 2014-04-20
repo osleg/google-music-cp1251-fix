@@ -55,11 +55,11 @@ require(["jquery", "underscore", "backbone", "json2"], function($, _, Backbone, 
   }
 
   function process_field(id) {
-    edits = document.getElementsByClassName(id);
+    value = document.getElementsByTagName(input)[0].value;
     //console.log('value: '+ value);
-    edits.each('input[type="text"', function(f){
-      console.log(f);
-    })
+    //edits.each('input[type="text"', function(f){
+      //console.log(f);
+    //})
     valueLen = value.length;
   
     fixed = fix_encoding(value);
@@ -95,7 +95,8 @@ require(["jquery", "underscore", "backbone", "json2"], function($, _, Backbone, 
     //  process_field(f)
     //});
     _.each('input', function(f){
-      process_field(f)
+      console.log(f);
+      process_field(f);
     });
     //process_field("edit-name");
     //process_field("edit-song-artist");
