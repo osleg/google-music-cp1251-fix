@@ -90,11 +90,11 @@ require(["jquery", "underscore", "backbone", "json2"], function($, _, Backbone, 
 
   function process_song(song) {
     open_menu(song);
-    //_.each(['edit-name', 'edit-song-artist', 'edit-album-artist',
+    //_.each(['input[data-field]', 'edit-song-artist', 'edit-album-artist',
     //    'edit-album', 'edit-composer', 'edit-genres'], function(f) {
     //  process_field(f)
     //});
-    _.each('edit-section', function(f){
+    _.each('input', function(f){
       process_field(f)
     });
     //process_field("edit-name");
