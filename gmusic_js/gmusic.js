@@ -56,6 +56,7 @@ require(["jquery", "underscore", "backbone", "json2"], function($, _, Backbone, 
 
   function process_field(id) {
     value = document.getElementById(id).value;
+    console.log('value: '+ value)
     valueLen = value.length;
 
     fixed = fix_encoding(value);
@@ -86,8 +87,11 @@ require(["jquery", "underscore", "backbone", "json2"], function($, _, Backbone, 
 
   function process_song(song) {
     open_menu(song);
-    _.each(['edit-name', 'edit-song-artist', 'edit-album-artist',
-        'edit-album', 'edit-composer', 'edit-genres'], function(f) {
+    //_.each(['edit-name', 'edit-song-artist', 'edit-album-artist',
+    //    'edit-album', 'edit-composer', 'edit-genres'], function(f) {
+    //  process_field(f)
+    //});
+    _.each('edit-section', function(f){
       process_field(f)
     });
     //process_field("edit-name");
@@ -113,7 +117,7 @@ require(["jquery", "underscore", "backbone", "json2"], function($, _, Backbone, 
       $(songs[i]).parent().parent().get(0).scrollIntoView();
       songs[i].scrollIntoView();
       $('#main').scrollTop($('#main').scrollTop() + 200);
-      songs = $('.songRow');
+      songs = $('.song-row');
       timeout = 4000;
     }
     var text = $(songs[i]).text();
